@@ -86,7 +86,7 @@ const Celebrate = () => {
 
       <div className="z-10 w-full max-w-3xl mt-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-black aspect-video flex justify-center items-center">
         <ReactPlayer 
-          url="https://youtu.be/4Zya_t98x3s?si=MpcKfkmGcEaEKgET" 
+          url="https://www.youtube.com/watch?v=4Zya_t98x3s" 
           width="100%"
           height="100%"
           controls={true}
