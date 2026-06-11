@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate } from 'react-router-dom';
+import ReactPlayer from 'react-player';
 
 import useWindowSize from '../hooks/useWindowSize';
 
@@ -84,13 +85,14 @@ const Celebrate = () => {
       </motion.h1>
 
       <div className="z-10 w-full max-w-3xl mt-8 rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-800 bg-black aspect-video flex justify-center items-center">
-        <video 
-          src="/memories/video_ai_hbd.mp4" 
-          className="w-full h-full object-contain"
-          controls
-          autoPlay
-          muted
-          loop
+        <ReactPlayer 
+          url="https://youtu.be/4Zya_t98x3s?si=MpcKfkmGcEaEKgET" 
+          width="100%"
+          height="100%"
+          controls={true}
+          playing={true}
+          muted={false}
+          loop={true}
         />
       </div>
 
