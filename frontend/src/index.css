@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ec4899;
+  --color-secondary: #8b5cf6;
+  --color-accent: #f59e0b;
+}
+
+@layer utilities {
+  .will-change-transform {
+    will-change: transform;
+  }
+  .will-change-opacity {
+    will-change: opacity;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  color: #f8fafc;
+  overflow-x: hidden;
+}
+
+/* Moving gradient background for Wishes wall */
+.ambient-gradient {
+  background: linear-gradient(270deg, #1e1b4b, #312e81, #4c1d95, #701a75);
+  background-size: 800% 800%;
+  animation: AnimationName 15s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes waterfall {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0%); }
+}
+
+.animate-waterfall {
+  animation: waterfall 30s linear infinite;
+}
+.animate-waterfall-fast {
+  animation: waterfall 20s linear infinite;
+}
+.animate-waterfall-slow {
+  animation: waterfall 40s linear infinite;
+}
+
+.animate-waterfall:hover,
+.animate-waterfall-fast:hover,
+.animate-waterfall-slow:hover {
+  animation-play-state: paused;
+}
