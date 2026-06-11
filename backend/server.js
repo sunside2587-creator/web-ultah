@@ -9,6 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+app.get('/', (req, res) => {
+  res.send('Backend Web Ultah is running!');
+});
+
 app.post('/api/wishes', async (req, res) => {
   const { sender, message } = req.body;
   if (!sender || !message) {
