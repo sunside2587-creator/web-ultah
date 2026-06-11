@@ -11,7 +11,7 @@ const Wishes = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const fetchWishes = () => {
-    fetch('http://localhost:5000/api/wishes')
+    fetch('https://web-ultah-mblw.vercel.app/api/wishes')
       .then(res => res.json())
       .then(data => setWishes(data))
       .catch(err => {
@@ -38,7 +38,7 @@ const Wishes = () => {
     try {
       if (editingId) {
         // Update logic
-        const response = await fetch(`http://localhost:5000/api/wishes/${editingId}`, {
+        const response = await fetch(`https://web-ultah-mblw.vercel.app/api/wishes/${editingId}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -51,7 +51,7 @@ const Wishes = () => {
         }
       } else {
         // Create logic
-        const response = await fetch('http://localhost:5000/api/wishes', {
+        const response = await fetch('https://web-ultah-mblw.vercel.app/api/wishes', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData)
@@ -83,7 +83,7 @@ const Wishes = () => {
     if (!window.confirm('Yakin ingin menghapus pesan ini?')) return;
     
     try {
-      const response = await fetch(`http://localhost:5000/api/wishes/${id}`, {
+      const response = await fetch(`https://web-ultah-mblw.vercel.app/api/wishes/${id}`, {
         method: 'DELETE'
       });
       
